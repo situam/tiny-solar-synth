@@ -1,0 +1,465 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_Microchip_ATtiny:ATtiny85V-10PU U1
+U 1 1 69493B00
+P 3400 2950
+F 0 "U1" H 2870 2996 50  0000 R CNN
+F 1 "ATtiny85V-10PU" H 2870 2905 50  0000 R CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 3400 2950 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf" H 3400 2950 50  0001 C CNN
+	1    3400 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Solar_Cell SC1
+U 1 1 69494704
+P 1700 3050
+F 0 "SC1" H 1808 3146 50  0000 L CNN
+F 1 "5V Solar Panel" H 1808 3055 50  0000 L CNN
+F 2 "" V 1700 3110 50  0001 C CNN
+F 3 "~" V 1700 3110 50  0001 C CNN
+	1    1700 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C3
+U 1 1 69495509
+P 4750 2650
+F 0 "C3" H 4842 2696 50  0000 L CNN
+F 1 "100nF" H 4842 2605 50  0000 L CNN
+F 2 "" H 4750 2650 50  0001 C CNN
+F 3 "~" H 4750 2650 50  0001 C CNN
+	1    4750 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Speaker LS1
+U 1 1 69496546
+P 6150 1900
+F 0 "LS1" H 6320 1896 50  0000 L CNN
+F 1 "Visaton K50 8ohm" H 6320 1805 50  0000 L CNN
+F 2 "" H 6150 1700 50  0001 C CNN
+F 3 "~" H 6140 1850 50  0001 C CNN
+	1    6150 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:BC337 Q1
+U 1 1 69496B2B
+P 5850 2350
+F 0 "Q1" H 6041 2396 50  0000 L CNN
+F 1 "BC337" H 6041 2305 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 6050 2275 50  0001 L CIN
+F 3 "https://diotec.com/tl_files/diotec/files/pdf/datasheets/bc337.pdf" H 5850 2350 50  0001 L CNN
+	1    5850 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_BJT:TIP120 Q2
+U 1 1 69497D48
+P 9350 3100
+F 0 "Q2" H 9557 3146 50  0000 L CNN
+F 1 "TIP120" H 9557 3055 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 9550 3025 50  0001 L CIN
+F 3 "http://www.fairchildsemi.com/ds/TI/TIP120.pdf" H 9350 3100 50  0001 L CNN
+	1    9350 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:IRLZ44N Q4
+U 1 1 69498879
+P 10300 3100
+F 0 "Q4" H 10504 3146 50  0000 L CNN
+F 1 "IRLZ44N" H 10504 3055 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 10550 3025 50  0001 L CIN
+F 3 "http://www.irf.com/product-info/datasheets/data/irlz44n.pdf" H 10300 3100 50  0001 L CNN
+	1    10300 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_PHOTO R7
+U 1 1 69499CE3
+P 5100 3600
+F 0 "R7" H 5170 3646 50  0000 L CNN
+F 1 "R_PHOTO" H 5170 3555 50  0000 L CNN
+F 2 "" V 5150 3350 50  0001 L CNN
+F 3 "~" H 5100 3550 50  0001 C CNN
+	1    5100 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_POT RV1
+U 1 1 6949A301
+P 5250 2750
+F 0 "RV1" V 5135 2750 50  0000 C CNN
+F 1 "10k" V 5044 2750 50  0000 C CNN
+F 2 "" H 5250 2750 50  0001 C CNN
+F 3 "~" H 5250 2750 50  0001 C CNN
+	1    5250 2750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R9
+U 1 1 6949B4CD
+P 5250 2500
+F 0 "R9" H 5191 2454 50  0000 R CNN
+F 1 "470R" H 5191 2545 50  0000 R CNN
+F 2 "" H 5250 2500 50  0001 C CNN
+F 3 "~" H 5250 2500 50  0001 C CNN
+	1    5250 2500
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:CP C1
+U 1 1 6949BB4B
+P 1100 3000
+F 0 "C1" H 1218 3046 50  0000 L CNN
+F 1 "470uF" H 1218 2955 50  0000 L CNN
+F 2 "" H 1138 2850 50  0001 C CNN
+F 3 "~" H 1100 3000 50  0001 C CNN
+	1    1100 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1100 2850 1400 2850
+Wire Wire Line
+	1700 3150 1400 3150
+$Comp
+L power:VCC #PWR03
+U 1 1 694B9849
+P 1400 2850
+F 0 "#PWR03" H 1400 2700 50  0001 C CNN
+F 1 "VCC" H 1417 3023 50  0000 C CNN
+F 2 "" H 1400 2850 50  0001 C CNN
+F 3 "" H 1400 2850 50  0001 C CNN
+	1    1400 2850
+	1    0    0    -1  
+$EndComp
+Connection ~ 1400 2850
+Wire Wire Line
+	1400 2850 1700 2850
+$Comp
+L power:GND #PWR04
+U 1 1 694BB1FE
+P 1400 3150
+F 0 "#PWR04" H 1400 2900 50  0001 C CNN
+F 1 "GND" H 1405 2977 50  0000 C CNN
+F 2 "" H 1400 3150 50  0001 C CNN
+F 3 "" H 1400 3150 50  0001 C CNN
+	1    1400 3150
+	1    0    0    -1  
+$EndComp
+Connection ~ 1400 3150
+Wire Wire Line
+	1400 3150 1100 3150
+Wire Wire Line
+	5250 2400 5250 2350
+$Comp
+L Device:R_Small R6
+U 1 1 694D1ED7
+P 4400 2750
+F 0 "R6" V 4204 2750 50  0000 C CNN
+F 1 "200r" V 4295 2750 50  0000 C CNN
+F 2 "" H 4400 2750 50  0001 C CNN
+F 3 "~" H 4400 2750 50  0001 C CNN
+	1    4400 2750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4000 2750 4300 2750
+Wire Wire Line
+	4500 2750 4750 2750
+$Comp
+L power:VCC #PWR09
+U 1 1 694E1244
+P 4750 2550
+F 0 "#PWR09" H 4750 2400 50  0001 C CNN
+F 1 "VCC" H 4767 2723 50  0000 C CNN
+F 2 "" H 4750 2550 50  0001 C CNN
+F 3 "" H 4750 2550 50  0001 C CNN
+	1    4750 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 2750 4750 2750
+Connection ~ 4750 2750
+Wire Wire Line
+	5250 2350 5650 2350
+Wire Wire Line
+	5950 2000 5950 2150
+$Comp
+L power:VCC #PWR012
+U 1 1 69524AD0
+P 5950 1900
+F 0 "#PWR012" H 5950 1750 50  0001 C CNN
+F 1 "VCC" H 5967 2073 50  0000 C CNN
+F 2 "" H 5950 1900 50  0001 C CNN
+F 3 "" H 5950 1900 50  0001 C CNN
+	1    5950 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR07
+U 1 1 6952D44A
+P 3400 2350
+F 0 "#PWR07" H 3400 2200 50  0001 C CNN
+F 1 "VCC" H 3417 2523 50  0000 C CNN
+F 2 "" H 3400 2350 50  0001 C CNN
+F 3 "" H 3400 2350 50  0001 C CNN
+	1    3400 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR08
+U 1 1 6952DA3E
+P 3400 3550
+F 0 "#PWR08" H 3400 3300 50  0001 C CNN
+F 1 "GND" H 3405 3377 50  0000 C CNN
+F 2 "" H 3400 3550 50  0001 C CNN
+F 3 "" H 3400 3550 50  0001 C CNN
+	1    3400 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR013
+U 1 1 6952FB51
+P 5950 2550
+F 0 "#PWR013" H 5950 2300 50  0001 C CNN
+F 1 "GND" H 5955 2377 50  0000 C CNN
+F 2 "" H 5950 2550 50  0001 C CNN
+F 3 "" H 5950 2550 50  0001 C CNN
+	1    5950 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R8
+U 1 1 69534CAA
+P 5100 3900
+F 0 "R8" H 5170 3946 50  0000 L CNN
+F 1 "R" H 5170 3855 50  0000 L CNN
+F 2 "" V 5030 3900 50  0001 C CNN
+F 3 "~" H 5100 3900 50  0001 C CNN
+	1    5100 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR011
+U 1 1 6953546E
+P 5100 4050
+F 0 "#PWR011" H 5100 3800 50  0001 C CNN
+F 1 "GND" H 5105 3877 50  0000 C CNN
+F 2 "" H 5100 4050 50  0001 C CNN
+F 3 "" H 5100 4050 50  0001 C CNN
+	1    5100 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR010
+U 1 1 695359BA
+P 5100 3450
+F 0 "#PWR010" H 5100 3300 50  0001 C CNN
+F 1 "VCC" H 5117 3623 50  0000 C CNN
+F 2 "" H 5100 3450 50  0001 C CNN
+F 3 "" H 5100 3450 50  0001 C CNN
+	1    5100 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 2850 4750 2850
+Wire Wire Line
+	4750 2850 4750 3750
+Wire Wire Line
+	4750 3750 5100 3750
+Connection ~ 5100 3750
+$Comp
+L Amplifier_Operational:LMV358 U2
+U 1 1 6953685C
+P 3950 5050
+F 0 "U2" H 3950 5417 50  0000 C CNN
+F 1 "LMV358" H 3950 5326 50  0000 C CNN
+F 2 "" H 3950 5050 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lmv324.pdf" H 3950 5050 50  0001 C CNN
+	1    3950 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R1
+U 1 1 6953F0EB
+P 1350 4850
+F 0 "R1" H 1409 4896 50  0000 L CNN
+F 1 "10K" H 1409 4805 50  0000 L CNN
+F 2 "" H 1350 4850 50  0001 C CNN
+F 3 "~" H 1350 4850 50  0001 C CNN
+	1    1350 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R2
+U 1 1 695419FC
+P 1350 5050
+F 0 "R2" H 1409 5096 50  0000 L CNN
+F 1 "10K" H 1409 5005 50  0000 L CNN
+F 2 "" H 1350 5050 50  0001 C CNN
+F 3 "~" H 1350 5050 50  0001 C CNN
+	1    1350 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR01
+U 1 1 6954205E
+P 1350 4750
+F 0 "#PWR01" H 1350 4600 50  0001 C CNN
+F 1 "VCC" H 1367 4923 50  0000 C CNN
+F 2 "" H 1350 4750 50  0001 C CNN
+F 3 "" H 1350 4750 50  0001 C CNN
+	1    1350 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 695424FF
+P 1350 5150
+F 0 "#PWR02" H 1350 4900 50  0001 C CNN
+F 1 "GND" H 1355 4977 50  0000 C CNN
+F 2 "" H 1350 5150 50  0001 C CNN
+F 3 "" H 1350 5150 50  0001 C CNN
+	1    1350 5150
+	1    0    0    -1  
+$EndComp
+Text Label 1650 4950 0    50   ~ 0
+VMID
+Wire Wire Line
+	1350 4950 1650 4950
+Connection ~ 1350 4950
+Text Label 3650 4950 2    50   ~ 0
+VMID
+$Comp
+L Device:R_Small R5
+U 1 1 69543DB6
+P 4000 5500
+F 0 "R5" V 4196 5500 50  0000 C CNN
+F 1 "47K" V 4105 5500 50  0000 C CNN
+F 2 "" H 4000 5500 50  0001 C CNN
+F 3 "~" H 4000 5500 50  0001 C CNN
+	1    4000 5500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3650 5150 3650 5500
+Wire Wire Line
+	3650 5500 3900 5500
+Wire Wire Line
+	4250 5050 4250 5500
+Wire Wire Line
+	4250 5500 4100 5500
+$Comp
+L Device:Microphone MK1
+U 1 1 69546C9E
+P 2400 5400
+F 0 "MK1" H 2530 5446 50  0000 L CNN
+F 1 "Electret Microphone" H 2530 5355 50  0000 L CNN
+F 2 "" V 2400 5500 50  0001 C CNN
+F 3 "~" V 2400 5500 50  0001 C CNN
+	1    2400 5400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR06
+U 1 1 69548B8D
+P 2400 5600
+F 0 "#PWR06" H 2400 5350 50  0001 C CNN
+F 1 "GND" H 2405 5427 50  0000 C CNN
+F 2 "" H 2400 5600 50  0001 C CNN
+F 3 "" H 2400 5600 50  0001 C CNN
+	1    2400 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R3
+U 1 1 6954909D
+P 2400 4950
+F 0 "R3" H 2459 4996 50  0000 L CNN
+F 1 "R_Small" H 2459 4905 50  0000 L CNN
+F 2 "" H 2400 4950 50  0001 C CNN
+F 3 "~" H 2400 4950 50  0001 C CNN
+	1    2400 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR05
+U 1 1 69549CE5
+P 2400 4850
+F 0 "#PWR05" H 2400 4700 50  0001 C CNN
+F 1 "VCC" H 2417 5023 50  0000 C CNN
+F 2 "" H 2400 4850 50  0001 C CNN
+F 3 "" H 2400 4850 50  0001 C CNN
+	1    2400 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 5050 2400 5150
+$Comp
+L Device:C_Small C2
+U 1 1 6954A965
+P 3050 5150
+F 0 "C2" V 2821 5150 50  0000 C CNN
+F 1 "10uF" V 2912 5150 50  0000 C CNN
+F 2 "" H 3050 5150 50  0001 C CNN
+F 3 "~" H 3050 5150 50  0001 C CNN
+	1    3050 5150
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R4
+U 1 1 6954BE80
+P 3350 5150
+F 0 "R4" V 3546 5150 50  0000 C CNN
+F 1 "1K" V 3455 5150 50  0000 C CNN
+F 2 "" H 3350 5150 50  0001 C CNN
+F 3 "~" H 3350 5150 50  0001 C CNN
+	1    3350 5150
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3250 5150 3150 5150
+Wire Wire Line
+	3450 5150 3650 5150
+Connection ~ 3650 5150
+Wire Wire Line
+	2400 5150 2950 5150
+Connection ~ 2400 5150
+Wire Wire Line
+	2400 5150 2400 5200
+Wire Wire Line
+	4000 2950 4250 2950
+Wire Wire Line
+	4250 2950 4250 5050
+Connection ~ 4250 5050
+Text Notes 9150 2750 0    50   ~ 0
+Alternatives for audio output amplification:
+$Comp
+L Transistor_FET:AO3401A Q3
+U 1 1 6956579E
+P 9350 3650
+F 0 "Q3" H 9554 3696 50  0000 L CNN
+F 1 "AO3400" H 9554 3605 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 9550 3575 50  0001 L CIN
+F 3 "http://www.aosmd.com/pdfs/datasheet/AO3401A.pdf" H 9350 3650 50  0001 L CNN
+	1    9350 3650
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
