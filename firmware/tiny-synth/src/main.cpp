@@ -1,7 +1,8 @@
 #include <Arduino.h>
 #include "jerboa.h"
 
-unsigned int Acc1;
+byte i1 = 0;
+byte i2 = 0;
 
 const byte sine256[] PROGMEM = { // sine wavetable
   0, 0, 0, 0, 0, 0, 1, 1, 1, 2, 2, 3, 4, 5, 5, 6, 7, 9, 10, 11, 12, 14, 15, 17, 18, 20, 21, 23, 25, 27, 29, 31, 33, 35, 37, 40, 42, 44, 47, 49, 52, 54, 57, 59, 62, 65, 67, 70, 73, 76, 79, 82, 85, 88, 90, 93, 97, 100, 103, 106, 109, 112, 115, 118, 121, 124, 128,
@@ -15,7 +16,9 @@ void Setup() {}
 
 void Loop() {
   byte p1 = InA();
-  Acc1 += (p1 << 4);
-  byte snd = pgm_read_byte(&sine256[Acc1 >> 8]);
+  i1 += p1 / 4;
+  //i2 += p1 / 12;
+  byte snd = pgm_read_byte(&sine256[i1]);
+  //byte snd = (pgm_read_byte(&sine256[i1]) + pgm_read_byte(&sine256[i2])) / 2;
   OutF(snd);
 }

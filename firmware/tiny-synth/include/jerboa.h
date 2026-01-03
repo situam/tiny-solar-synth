@@ -223,7 +223,8 @@ struct AnalogIn {
     // Use 6:   16MHz / 64 => 250kHz.    
     // 250kHz / 13 => 19,230 samples per sec; nyquist 9615 Hz
     // Use 5: Can do two samples, 9615 Hz.
-#define DIVISOR 5
+#define DIVISOR 4
+//#define DIVISOR 5
     byte tmp = _BV(ADEN) |  // Enable the Analog-to-Digital converter (p136)
               _BV(ADATE) |  // Enable ADC auto trigger
               _BV(ADIE) |  // Enable interrupt on Conversion Complete
