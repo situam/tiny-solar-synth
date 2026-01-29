@@ -1,0 +1,1 @@
+https://www.talkingelectronics.com/projects/TheTransistorAmplifier/TheTrAmp/TheTrAmpP1A.html
